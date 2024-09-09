@@ -3,24 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <title>Contact</title>
+        <link rel="stylesheet" href="../styling/styles.css">
     </head>
     <body>
         <header>
-            <nav style="text-align: center; background-color:rgb(193, 200, 216) ;">
-                <a href="main.html" style="display: inline-block; padding: 10px; color: rgb(108, 87, 40); text-decoration: none;">Main Menu</a>
-                <a href="projects.html" style="display: inline-block; padding: 10px; color: rgb(108, 87, 40); text-decoration: none;">Projects</a>
+            <nav id="main_navigation">
+                <a class="menu_link" href="main.html">About Me</a>
+                <a class="menu_link" href="projects.html">Projects</a>
             </nav>
-            <h1 style="color: crimson">CONTACT ME!</h1>
+            <h1 style="color: crimson; text-align: center;">CONTACT ME!</h1>
         </header>
         <main>
-            <p>There are several ways which you can contact me to know more about me or my projects!
+            <p style="text-align: center; margin-top: -25px;">There are several ways which you can contact me to know more about me or my projects!
                 <br>While my contact information may be limited for security reasons, I am more than happy to setup a meeting to meet each other!          
             </p>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/miguelgarcesl/">LinkedIn</a></li>
-                <li><a href="https://github.com/destrutoyt">Github</a></li>
-                <li><a href="https://www.instagram.com/garcesl_miguel/">Instagram</a></li>
-            </ul>
+            <div id="contact_img_links">
+                <a href="https://github.com/destrutoyt">
+                    <img class="img_contact" src="../images/github_logo.png" alt="github_link">
+                </a>
+                <a href="https://www.linkedin.com/in/miguelgarcesl/">
+                    <img class="img_contact" src="../images/linkedin_logo.png" alt="linkedin_link">
+                </a>
+                <a href="https://www.instagram.com/garcesl_miguel/">
+                    <img class="img_contact" src="../images/instagram_logo.png" alt="instagram_link">
+                </a>
+            </div>
         </main>
     </body>
 </html>

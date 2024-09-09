@@ -2,29 +2,38 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Main Menu</title>
+        <title>About Me</title>
+        <link rel="stylesheet" href="../styling/styles.css">
     </head>
     <body>
         <header>
-            <nav style="text-align: center; background-color:rgb(193, 200, 216) ;">
-                <a href="projects.html" style="display: inline-block; padding: 10px; color: rgb(108, 87, 40); text-decoration: none;">Projects</a>
-                <a href="contact.html" style="display: inline-block; padding: 10px; color: rgb(108, 87, 40); text-decoration: none;">Contact</a>
+            <nav id="main_navigation">
+                <a class="menu_link" href="projects.html">Projects</a>
+                <a class="menu_link" href="contact.html">Contact</a>
             </nav>
-            <h1 style="text-align: center;">Hi & Welcome to my Portfolio!</h1>
+            <h1 style="text-align: center;">Welcome To My Portfolio!</h1>
         </header>
 
         <main>
-            <p style="text-align: center;">My name is Miguel Garces Lenis and you are currently looking at the <b>Main Menu</b> of my 
-                portfolio.<br>On this website, you will find my completed personal projects that showcases my skills in various topics!</p>
-            <p style="text-align: center;">In addition, I made this website using HTML, CSS, JavaScript, and very soon, I will start implementing
-                new technologies that are use in real-world environments.<br>For now, please delight yourself with this 
-                <b style="color: chocolate;">WEBSITE!</b>
-            </p>
+            <div class="content_intro">
+                <img src="../images/pic_of_me.jpg" width="300" alt="Picture of myself" class="pic_of_me">
+                <p style="text-align: center;">
+                    My name is Miguel Garces Lenis and you are currently looking at the <b>Main Menu</b> of my 
+                    portfolio. On this website, you will find my completed personal projects that showcases my skills in various topics!
+                    <br><br>In addition, I made this website using HTML, CSS, JavaScript, and very soon, I will start implementing
+                    new technologies that are use in real-world environments.<br>For now, please delight yourself with this 
+                    <b style="color: chocolate;">WEBSITE!</b>
+                </p>
+            </div>
         </main>
 
         <footer>
-            <p style="color: red; text-align: center;">Website Version: 1.0</p>
-            <p style="text-align: center;">1.0 contains HTML elements with basic CSS styles. Check NOTION for scheduled work.</p>
+            <div>
+                <p style="color: red; text-align: center;">
+                    Website Version: 2.0
+                    <span style="color: black;"><br>2.0 improves webpage's design and keeps all CSS external. Check NOTION for scheduled work.</span>
+                </p>
+            </div>
         </footer>
         
     </body>
