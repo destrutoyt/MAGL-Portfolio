@@ -6,17 +6,26 @@ h1, h2, h3, h4 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body {
-    margin: auto;
-    max-width: 1500px;
+    max-width: 75%;
     background-color:beige;
+    margin: auto;
 }
 main {
-    padding: 20px;
+    padding: 40px;
 }
+
 footer p {
-    margin: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    margin: 0, 0, 0, 0;
     border: 2px solid lime;
     border-style: groove;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:rgb(172, 135, 108);
 }
 
 /* Animations */
@@ -34,29 +43,32 @@ footer p {
 }
 
 /* Navigation */
-.menu_link {
-    display: inline-block;
-    padding: 15px;
-    text-decoration: none;
-    color:white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 17px;
+.nav-link:hover {
+    color: #3498db; /* Set custom text color */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
 }
-.menu_link:hover {
-    color: red;
+/* Main.html */
+.row {
+    display: flex;
+    flex-direction: row;
 }
-#main_navigation {
-    background-color: gainsboro;
-    text-align: center;
+.card-body {
+    background-color: rgb(191, 247, 228);
+    border: 1px solid rgb(33, 67, 76);
+    transition: border 0.1s ease-in;
+}
+.card-body .card-title {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+.card-body .card-text {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+.card-body:hover {
+    border-width: 2px;
 }
 
-/* Main.html */
-.content_intro {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 .pic_of_me {
     float: left;
     margin-right: 20px;
