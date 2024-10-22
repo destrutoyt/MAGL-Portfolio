@@ -5,6 +5,9 @@ p {
 h1, h2, h3, h4 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+cite {
+    color: black;
+}
 body {
     max-width: 75%;
     margin: auto;
@@ -29,25 +32,20 @@ footer {
     margin-bottom: auto;
 }
 
-/* Animations */
-@keyframes project_description_anim {
-    from {opacity: 0;}
-    to {opacity: 1;}
+/* Navigation */
+.nav-link {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
-@keyframes project_title_anim {
-    from {padding-top: 95px;}
-    to {padding-top: 50px; color: rgb(11, 101, 236);}
+.nav-link:hover {
+    color: rgb(86, 177, 147);
+    transition: color 0.3s ease-in-out;
 }
-@keyframes project_button_anim {
-    from {opacity: 0;}
-    to {opacity: 1;}
+.nav-link.active {
+    color:#09f !important;
 }
 
-/* Navigation */
-.nav-link:hover {
-    color: #3498db; /* Set custom text color */
-    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
-}
 .btn {
     border: 2px solid black;
     border-radius: 50%;
@@ -65,18 +63,23 @@ footer {
     display: flex;
     flex-direction: row;
 }
+.card {
+    background-color: transparent;
+}
 .card-body {
     background-color: rgb(191, 247, 228);
-    border: 1px solid rgb(33, 67, 76);
+    border: 2px solid rgb(33, 67, 76);
     transition: transform 0.3s ease;
 }
 .card-body .card-title {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
+    color: black;
 }
 .card-body .card-text {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
+    color: black;
 }
 .card-body:hover {
     transform: scale(1.05);
@@ -172,4 +175,18 @@ footer {
 .project_button:hover{
     background-color: rgb(0, 119, 198);
     color:springgreen;
+}
+
+/* Animations */
+@keyframes project_description_anim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes project_title_anim {
+    from {padding-top: 95px;}
+    to {padding-top: 50px; color: rgb(11, 101, 236);}
+}
+@keyframes project_button_anim {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

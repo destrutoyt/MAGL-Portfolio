@@ -1,3 +1,38 @@
-.darkMode p {
-    color: red;
+.darkMode footer {
+    background-color: rgb(0, 76, 86);
+}
+.darkmode .creditText {
+    color: rgb(202, 202, 202);
+}
+.darkMode { /* BODY BACKGROUND */
+    background-color: rgb(57, 104, 138);
+}
+.darkMode h1,
+.darkMode p{
+    color: white;
+}
+.darkMode blockquote, 
+.darkMode .blockquote-footer,
+.darkMode figcaption {
+    color: white;
+}
+.darkMode .nav-link {
+    color: white;
+}
+/* Dark theme hover animation */
+.darkMode .nav-link:hover {
+    color: #c2c2c2;
+    transition: color 0.3s ease-in-out;
+}
+
+.darkMode .nav-link.active {
+    color: aquamarine;
+}
+.darkMode .card-body {
+    background-color: rgb(103, 166, 169);
+}
+.darkMode .card-title,
+.darkMode .card-text,
+.darkMode cite {
+    color: white;
 }
