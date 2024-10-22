@@ -85,6 +85,22 @@ footer {
     transform: scale(1.05);
 }
 
+/* QUOTE ELEMENT */
+.text-center {
+    margin: 20px auto; /* Adds margin around the quote, centers it horizontally */
+    max-width: 80%; /* Ensure it doesn't stretch too wide on large screens */
+}
+
+blockquote {
+    margin: 0; /* Removes default margin */
+    padding: 10px; /* Adds some padding inside the blockquote */
+}
+
+.blockquote-footer {
+    font-size: 14px; /* Adjusts font size */
+}
+
+
 .pic_of_me {
     float: left;
     margin-right: 20px;
@@ -189,4 +205,17 @@ footer {
 @keyframes project_button_anim {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 320px) AND (max-width: 767px) {
+    footer {
+        padding: 12px;
+    }
+    .creditsText {
+        font-size: 10px;
+    }
+    blockquote {
+        padding: 1px; /* Adds some padding inside the blockquote */
+    }
 }
