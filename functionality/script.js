@@ -34,11 +34,11 @@ function buttonClicked() {
 function lightMode() {
     console.log("Light Mode On");
     body.classList.remove('darkMode');
-    moonImage.src = './node_modules/bootstrap-icons/icons/lightbulb.svg';
+    moonImage.src = './images/lightbulb.svg';
 }
 
 function darkMode() {
     console.log("Dark Mode On")
     body.classList.add('darkMode');
-    moonImage.src = './node_modules/bootstrap-icons/icons/lightbulb-off.svg';
+    moonImage.src = './images/lightbulb-off.svg';
 }
