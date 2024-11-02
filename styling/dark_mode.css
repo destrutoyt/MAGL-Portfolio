@@ -1,3 +1,7 @@
+:root {
+    --border-gradient-dark: linear-gradient(30deg, #6da3c3, #b37a4e);
+}
+
 .darkMode footer {
     background-color: rgb(0, 76, 86);
 }
@@ -5,7 +9,7 @@
     color: rgb(202, 202, 202);
 }
 .darkMode { /* BODY BACKGROUND */
-    background-color: rgb(57, 104, 138);
+    background-color: rgb(74, 121, 155);
 }
 .darkMode h1,
 .darkMode p{
@@ -17,11 +21,11 @@
     color: white;
 }
 .darkMode .nav-link {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 /* Dark theme hover animation */
 .darkMode .nav-link:hover {
-    color: #c2c2c2;
+    color: #1c80c2;
     transition: color 0.3s ease-in-out;
 }
 
@@ -35,4 +39,19 @@
 .darkMode .card-text,
 .darkMode cite {
     color: white;
+}
+.darkMode .top-content {
+    background-color: rgb(110, 174, 160);
+} 
+.darkMode .positionTitle {
+    color: whitesmoke;
+}
+.darkMode .mainPicture {
+    border-image: var(--border-gradient-dark) 1;
+}
+.darkMode .skillShowcase {
+    color: white;
+}
+.darkMode .waveEffect {
+    background-color: rgb(74, 121, 155);
 }
