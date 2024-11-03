@@ -16,6 +16,7 @@ body {
     max-width: 100%;
     margin: 0;
     background-color: rgb(152, 232, 198);
+    overflow-x: hidden;
 }
 main {
     padding: 10px;
