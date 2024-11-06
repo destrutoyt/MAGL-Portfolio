@@ -1,5 +1,5 @@
 :root {
-    --border-gradient-dark: linear-gradient(30deg, #6da3c3, #b37a4e);
+    --border-gradient-dark: linear-gradient(128deg, #8fc5e4 20%, #b775db 40%);
 }
 
 .darkMode footer {
@@ -54,4 +54,11 @@
 }
 .darkMode .waveEffect {
     background-color: rgb(74, 121, 155);
+}
+.darkMode .project-card {
+    background: linear-gradient(61deg,#1e695a 30%, #2d814c 80%);
+}
+.darkMode .project-card:hover {
+    box-shadow: 1px 1px 32px 2px rgba(108, 188, 225, 0.94);
+    transform: scale(1.02);
 }

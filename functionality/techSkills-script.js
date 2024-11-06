@@ -36,6 +36,7 @@ function insertSkills() {
     certf.forEach(skills => { // Since there is only ONE certificate, skip the conditionals for diff links per certificate
         const aElement = document.createElement('a');
         aElement.href = 'https://www.credly.com/badges/922e12ff-b235-422b-9097-17107f79563e/public_url';
+        aElement.target = '_blank';
         aElement.textContent = skills;
         aElement.classList.add('badge');
         aElement.classList.add('cert');
