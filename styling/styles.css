@@ -289,16 +289,49 @@ blockquote {
     border-radius: 10px;
     transform: scale(1.03);
 }
+
 /* CONTACT WEBPAGE */
-#contact_img_links{
+.main-form {
     display: flex;
-    padding: 5px;
-    gap: 10px;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px auto auto auto;
+    width: 50%;
+    border: 2px solid bisque;
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
 }
-.img_contact{
-    width: 95px;
+.form-control {
+    border-width: 2px;
+    border-color: #151716;
 }
+.submit-button {
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    border: 3px solid rgb(40, 123, 134);
+    background-color: rgb(193, 151, 151);
+    padding: 8px;
+    opacity: 0.6;
+    transition: all 0.5s ease;
+}
+.submit-button:not(.disabled) {
+    opacity: 1;
+    color: white;
+    background-color: rgb(108, 209, 117);
+    cursor: pointer;
+}
+.submit-button:not(.disabled):hover {
+    border-radius: 10px;
+    transform: scale(1.03);
+}
+.disabled {
+    cursor: not-allowed !important;
+}
+
 /* Animations */
 @keyframes animate {
     0% { background-position-x: 0;}

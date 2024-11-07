@@ -31,29 +31,43 @@
                 </nav>
             </section>
             <div style="text-align: center;">
-                <h3 style="color: rgb(238, 121, 103);">THIS SECTION IS BEING CREATED AND WILL LAUNCH VERY SOON!</h3>
+                <h3 style="color: rgb(238, 121, 103);">FORM SUBMISSIONS PROVIDER IS BEING TESTED</h3>
                 <button id="theme_button" class="btn btn-sm" type="button">
                     <img class="moon" src="" width="20px" height="25px">
                 </button>
             </div>
         </header>
         <main>
-            <!-- <div id="contact_img_links">
-                <a href="https://github.com/destrutoyt">
-                    <img class="img_contact" src="../images/github_logo.png" alt="github_link">
-                </a>
-                <a href="https://www.linkedin.com/in/miguelgarcesl/">
-                    <img class="img_contact" src="../images/linkedin_logo.png" alt="linkedin_link">
-                </a>
-                <a href="https://www.instagram.com/garcesl_miguel/">
-                    <img class="img_contact" src="../images/instagram_logo.png" alt="instagram_link">
-                </a>
-            </div> --> 
+            <div class="main-form">
+                <form id="contact-form" 
+                action="https://formspree.io/f/mqakqlwv" 
+                method="post"
+                target="_blank">
+                    <h3>CONTACT FORM</h3>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="user" class="form-control" id="userName" placeholder="name@example.com" required>
+                        <label for="userName">Your Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" class="form-control" id="emailAddress" placeholder="name@example.com" required>
+                        <label for="emailAddress">Email Address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" name="message" id="message" placeholder="name@example.com" style="height: 250px;" required></textarea>
+                        <label for="message">Message </label>
+                    </div>
+                    <div>
+                        <button class="submit-button disabled" type="submit" id="submitButton">Submit form</button>
+                    </div>
+                </form>
+            </div>
+
         </main>
         <footer style="position: fixed;">
             <p class="creditsText">❤️ Developed & Designed by Miguel Garces ❤️</p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script rel="script" src="./functionality/darkMode-script.js"></script>
+        <script rel="script" src="./functionality/formValidator.js"></script>
     </body>
 </html>
