@@ -40,9 +40,10 @@
         <main>
             <div class="main-form">
                 <form id="contact-form" 
-                action="https://formspree.io/f/mqakqlwv" 
-                method="post"
-                target="_blank">
+                action="https://formsubmit.co/el/cuwece" 
+                method="POST"
+                target="_blank"
+                enctype="multipart/form-data">
                     <h3>CONTACT FORM</h3>
                     <div class="form-floating mb-3">
                         <input type="text" name="user" class="form-control" id="userName" placeholder="name@example.com" required>
@@ -56,6 +57,7 @@
                         <textarea class="form-control" name="message" id="message" placeholder="name@example.com" style="height: 250px;" required></textarea>
                         <label for="message">Message </label>
                     </div>
+                    <input type="hidden" name="_url" value="https://destrutoyt.github.io/Website---Portfolio/contact.html">
                     <div>
                         <button class="submit-button disabled" type="submit" id="submitButton">Submit form</button>
                     </div>
