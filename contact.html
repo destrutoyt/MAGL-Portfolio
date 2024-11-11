@@ -31,7 +31,7 @@
                 </nav>
             </section>
             <div style="text-align: center;">
-                <h3 style="color: rgb(238, 121, 103);">FORM SUBMISSIONS PROVIDER IS BEING TESTED</h3>
+                <h3 class="header-title">CONTACT ME!</h3>
                 <button id="theme_button" class="btn btn-sm" type="button">
                     <img class="moon" src="" width="20px" height="25px">
                 </button>
@@ -40,26 +40,23 @@
         <main>
             <div class="main-form">
                 <form id="contact-form" 
-                action="https://formsubmit.co/el/cuwece" 
-                method="POST"
-                target="_blank"
-                enctype="multipart/form-data">
-                    <h3>CONTACT FORM</h3>
+                action="https://api.web3forms.com/submit" 
+                method="POST">
+                    <input type="hidden" name="access_key" value="df91647e-f6e6-43ce-a12a-536a7b25fa53">
                     <div class="form-floating mb-3">
-                        <input type="text" name="user" class="form-control" id="userName" placeholder="name@example.com" required>
+                        <input type="text" name="user" class="form-control" id="userName" placeholder="Your Name" required>
                         <label for="userName">Your Name</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" name="email" class="form-control" id="emailAddress" placeholder="name@example.com" required>
+                        <input type="email" name="email" class="form-control" id="emailAddress" placeholder="Email Address" required>
                         <label for="emailAddress">Email Address</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" name="message" id="message" placeholder="name@example.com" style="height: 250px;" required></textarea>
-                        <label for="message">Message </label>
+                        <textarea class="form-control" name="message" id="message" placeholder="Message" style="height: 250px;" required></textarea>
+                        <label for="message">Message</label>
                     </div>
-                    <input type="hidden" name="_url" value="https://destrutoyt.github.io/Website---Portfolio/contact.html">
                     <div>
-                        <button class="submit-button disabled" type="submit" id="submitButton">Submit form</button>
+                        <button class="submit-button" type="submit" id="submitButton">Submit form</button>
                     </div>
                 </form>
             </div>

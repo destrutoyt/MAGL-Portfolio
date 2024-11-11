@@ -6,12 +6,10 @@ console.log('Form Validator initialized');
 form.addEventListener("input", function(event) {
     event.preventDefault();
     if (validationTest() == 3) {
-        console.warn("TEST PASSED!");
         submitButton.classList.remove('disabled');
         submitButton.disabled = false;
     }
     else {
-        console.error("TEST NOT PASSED!");
         submitButton.classList.add('disabled');
         submitButton.disabled = true;
     }
@@ -26,7 +24,6 @@ function validationTest() {
     let passed = 0;
 
     if (!isNaN(userName.value)) {
-        console.log("user cannot have numbers");
         userName.style.borderColor = 'red';
     }
     else {
@@ -35,7 +32,6 @@ function validationTest() {
     }
     
     if (!emailRegex.test(emailAddress)) {
-        console.log("No email found");
         emailLabel.style.borderColor = 'red';
     }
     else {
@@ -44,7 +40,6 @@ function validationTest() {
     }
 
     if (message.value.trim().length === 0) {
-        console.log("No message");
         message.style.borderColor = 'red';
     }
     else {
