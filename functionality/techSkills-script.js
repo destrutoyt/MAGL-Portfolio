@@ -2,10 +2,11 @@ const onInit = addEventListener("DOMContentLoaded", insertSkills);
 
 function insertSkills() {
     console.log("Skills are being added");
-    let frontEndSkills = ['HTML', 'CSS', 'BootStrap', 'Angular'];
-    let backEndSkills = ['Python', 'TypeScript', 'JavaScript', 'MySQL'];
+    let frontEndSkills = ['HTML', 'CSS', 'Bootstrap', 'Angular', 'JavaScript'];
+    let backEndSkills = ['Python', 'TypeScript', 'MySQL', 'PostgreSQL', 'Java'];
     let versionControlSkills = ['Git', 'GitHub', 'GitLab'];
     let certf = ['CompTIA Project+'];
+
 
     let frontEndList = document.getElementById('frontEnd');
     let backEndList = document.getElementById('backEnd');
