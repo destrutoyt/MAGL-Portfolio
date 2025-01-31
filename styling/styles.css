@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root {
     --border-gradient: linear-gradient(0deg, #ff7e5f, #feb47b);
     --footer-backg-color: rgba(6, 175, 205);
-    --body-backg-color: rgba(189, 255, 209);
+    --body-backg-color: rgba(136, 243, 170, 0.687);
     --nav-link-hover-text-color: rgba(86, 177, 147);
     --darkMode-button-hover-backg-color: rgba(201, 222, 243);
     --darkMode-button-hover-border-color: rgba(88, 148, 148);
@@ -234,7 +236,9 @@ blockquote {
 
 /* PROJECT WEBPAGE */
 .header-projects-title {
-    color: #feb47b;
+    font-family: "Chakra Petch", serif;
+    font-weight: 600;
+    color: #000000;
     font-size: 50px;
 }
 .project-container {
@@ -245,55 +249,75 @@ blockquote {
     gap: 70px;
 }
 .project-card {
-    padding: 10px 100px 10px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 500px; /* Adjust if necessary */
+    padding: 0px 30vw 50px 30vw;
     border-bottom: 2px solid gray;
+    opacity: 0;
+}
+.project-card:nth-child(1) {
+    animation: fade-in 1s ease 1s forwards;
+}
+.project-card:nth-child(2) {
+    animation: fade-in 1s ease 2s forwards;
+}
+.project-card:nth-child(3) {
+    animation: fade-in 1s ease 3s forwards;
 }
 .card-right-shadow {
-    box-shadow: 25px -17px 3px -5px rgba(46,46,46,0.44);
+    box-shadow: 0px 0px 35px 3px rgba(36, 158, 85, 0.607);
 }
 .card-left-shadow {
-    box-shadow: -25px -17px 3px -5px rgba(46,46,46,0.44);
+    box-shadow: 0px 0px 35px 3px rgba(36, 158, 85, 0.607);
 }
-.card-img-right {
-    width: 350px;
-    height: 350px;
+.card-img-right, .card-img-left  {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 280px;
+    object-fit: cover; /* Ensures the image fills the square without stretching */
     float: right;
-    margin-left: 20px;
 }
 .card-img-left {
-    width: 350px;
-    height: 350px;
     float: left;
-    margin-right: 20px;
 }
 .project-title {
+    padding-top: 5px;
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
     width: 70%;
     color: rgb(242, 180, 24);
 }
 .project-tags {
     display: flex;
+    flex-direction: row;
     padding: 0;
     gap: 10px;
     list-style-type: none;
 }
 .tag {
+    display: inline-block; /* Ensures proper spacing */
+    min-width: 80px; /* Adjust this value as needed */
     text-align: center;
-    background-color: grey;
-    padding: 7px 10px 7px 10px;
+    background-color: rgb(87, 186, 181);
+    padding: 7px 10px;
     border-radius: 5px;
     font-size: 1rem;
     color: white;
     transition: all 0.5s ease;
+    white-space: nowrap; /* Prevents text from breaking */
 }
 .tag:hover {
-    background-color: rgb(93, 189, 122);
+    background-color: rgb(102, 222, 216);
 }
 .project-description {
     font-size: 1.2rem;
-    width: 80vh;
+    width: 100%;
     color: black;
 }
 .left-text {
@@ -302,10 +326,13 @@ blockquote {
 }
 .right-text {
     text-align: left;
-    padding-left: -20px;
+    margin-left: -20px;
 }
-.project-button{
-    display: inline-block;
+.project-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 200px;
     position: relative;
     bottom: -15px;
     padding: 5px 15px 5px 15px;
@@ -321,7 +348,7 @@ blockquote {
 .project-button:hover {
     background-color: var(--project-button-backg-color);
     border-radius: 10px;
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 /* CONTACT WEBPAGE */
@@ -371,7 +398,10 @@ blockquote {
     0% { background-position-x: 0;}
     100% {background-position-x: 1000px;}
 }
-
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 /* RESPONSIVE DESIGN */
 @media (min-width: 320px) AND (max-width: 767px) {
     footer {
@@ -389,5 +419,25 @@ blockquote {
     }
     .mainPicture {
         margin-left: 0; /* Centers on smaller screens */
+    }
+}
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: row; /* Stack items on smaller screens */
+        align-items: center;
+    }
+    .card-img-right, .card-img-left {
+        max-width: 90%; /* Allow flexibility */
+        height: auto;
+    }
+    .project-title, .project-description {
+        text-align: center;
+        width: 90%;
+    }
+    .project-button {
+        max-width: 500px;
+    }
+    .project-tags {
+        justify-content: center;
     }
 }
