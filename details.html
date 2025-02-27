@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Projects</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styling/styles.css">
+        <script rel="script" src="./functionality/addClassOnClick.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h4 style="font-size: 30px; color: white;">Miguel <span class="peachy-color">GL</span></h4>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="nav-active" href="details.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="details-container">
+                <div class="left-container">
+                    <h2 class="h2-large-text">Why hire me?</h2>
+                    <p class="p-small-text">Learn more about me by pressing any button!</p>
+                    <button class="details-button active" data-target="about-me">
+                        <a>About Me</a>
+                    </button>
+                    <button class="details-button" data-target="education">
+                        <a>Education</a>
+                    </button>
+                    <button class="details-button" data-target="skills">
+                        <a>Skills</a>
+                    </button>
+                    <button class="details-button" data-target="#experience">
+                        <a>Experience</a>
+                    </button>
+                </div>
+                <div class="right-container">
+                    <div class="detail-content hidden" id="about-me">
+                        <h3 class="h3-medium-text  margin-left-100">About Me</h3>
+                        <p class="p-small-description margin-left-100">Hi! My name is <span class="peachy-color">Miguel Angel Garces Lenis</span>, and I am a student at Western Governors University (WGU), pursuing a B.S. in Software Engineering.<br>
+
+                            <br>At WGU, I've been diving deep into coding languages like Python, JavaScript, HTML, and CSS. By acquiring these skills, I started building projects that focus on real-world applications—for example, my Weather App developed with Python!<br>
+                            
+                            <br>Growing up, I was always curious about how technology worked, from video games to apps, and I knew I wanted to be part of creating those awesome experiences.<br>
+                            
+                            <br>Balancing school and work hasn't always been easy, but it pushes me to be more disciplined and develop critical problem-solving skills. Code isn't always perfect and often contains flaws. I have encountered many bugs while developing new projects, and while it can be frustrating, <span class="peachy-color"> I focus on the problem, solve it, and learn from it.</span><br>
+                            
+                            <br>My goal is to become a <span class="peachy-color">Full-Stack Software Engineer</span>, working on innovative software solutions that make a positive impact on people's lives.
+                        </p>
+                    </div>
+                </div>
+                <div class="detail-content" id="education">
+                    <h3 class="h3-medium-text">My Education</h3>
+                    <p class="p-small-description">My academic background reflects my passion for software engineering and problem-solving.</p>
+                    <div class="education-container">
+                        <div class="education-content">
+                            <h5 class="h5-small-text" style="color: var(--neon-green);">2024 - Present</h5>
+                            <h4 class="h4-small-text light-weight">Western Governors University</h4>
+                            <p class="p-small-description">B.S. Software Engineering<br>
+                            Expected Graduation: July 2026
+                            </p>
+                        </div>
+                        <div class="education-content">
+                            <h5 class="h5-small-text" style="color: var(--neon-green);">2021 - 2023</h5>
+                            <h4 class="h4-small-text light-weight">DeVry University</h4>
+                            <p class="p-small-description">A.S. Information Technology & Networking<br>
+                                <span class="honor-text">Honor Student</span>
+                            </p>
+                        </div>
+                        <div class="education-content">
+                            <h5 class="h5-small-text" style="color: var(--neon-green);">2023</h5>
+                            <h4 class="h4-small-text light-weight">Kretivstorm</h4>
+                            <p class="p-small-description">Python Development<br>
+                                Certificate
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-content hidden" id="skills">
+                    <p>Skills</p>
+                </div>
+                <div class="detail-content hidden" id="experience">
+                    <p>Experience</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
