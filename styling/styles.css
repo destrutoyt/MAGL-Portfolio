@@ -23,7 +23,9 @@
     --neon-green: #4eea66;
     --peachy: #ff7e5f;
     --saffron: rgb(255, 178, 36);
-
+    --light-warm-color: rgba(255, 215, 156, 0.968);
+    --dark-beige-transparent: rgba(170, 142, 108, 0.833);
+    --peachy-blue: rgb(103, 157, 190);
 }
 
 /* ===== GENERAL STYLYING ===== */
@@ -60,7 +62,10 @@ header {
     color: var(--peachy) !important;
 }
 .neon-green {
-    color: var(--neon-green);
+    color: var(--neon-green) !important;
+}
+.dark-beige {
+    color: var(--light-warm-color) !important;
 }
 .animated-colors {
     background: linear-gradient(45deg , var(--neon-orange), var(--neon-pink), var(--neon-purple), var(--neon-yellow));
@@ -101,6 +106,10 @@ header {
     font-size: 1.5rem;
     color: white;
 }
+.h4-smaller-text {
+    font-size: 1.2rem;
+    color: white;
+}
 .h5-small-text {
     font-size: 1.2rem;
     font-weight: 400;
@@ -133,10 +142,17 @@ header {
     font-weight: 400;
     color: white;
 }
-
 /* ===== MISCELLANEOUS  ===== */
+.date-timeframe {
+    font-size: 1.2rem;
+    color: var(--light-warm-color);
+    font-weight: 700;
+}
 .light-weight {
     font-weight: 500;
+}
+.bold-weight {
+    font-weight: 700;
 }
 .margin-botton-50 {
     margin-bottom: 50px;
@@ -265,7 +281,6 @@ header {
     transform: scale(1.05);
     letter-spacing: 2px;
 }
-
 /* == RIGHT CONTAINER DESIGN == */
 .education-container {
     display: flex;
@@ -274,7 +289,8 @@ header {
     left: 0;
 }
 .education-content {
-    border: 2px solid var(--neon-purple);
+    border: 2px solid;
+    border-color: var(--dark-beige-transparent);
     border-radius: 30px;
     padding: 30px;
     width: 350px;
@@ -282,8 +298,28 @@ header {
     transition: all 0.3s ease;
 }
 .education-content:hover {
-    background-color: var(--neon-purple);
+    background-color: var(--dark-beige-transparent);
     transform: scale(1.05);
+}
+/* == SKILLS CONTAINER DESIGN == */
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.logo-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+    color: rgb(103, 157, 190);
+    font-weight: bold;
+}
+.logo-wrapper:hover .logo-text {
+    opacity: 1;
+    transform: translateY(0);
 }
 .logo-container {
     display: flex;
@@ -294,18 +330,46 @@ header {
     gap: 50px;
 }
 .logo {
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
     border-radius: 10px;
-    border: 2px solid;
-    border-color: rgb(103, 157, 190);
-    padding: 50px;
+    border: 2px solid var(--peachy-blue);
+    padding: 25px;
     transition: all 0.3s ease;
 }
 .logo:hover {
-    background-color: rgb(103, 157, 190);
+    background-color: var(--peachy-blue);
     transform: scale(1.05);
 }
+
+
+/* == EXPERIENCE CONTAINER DESIGN == */
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    left: 0;
+}
+.experience-content {
+    border: 2px solid;
+    border-color: #77ac80;
+    border-radius: 30px;
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.experience-content:hover {
+    background-color: #77ac80;
+    transform: scale(1.05);
+}
+
+
+
+
+
 
 
 .row {

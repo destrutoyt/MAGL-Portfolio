@@ -12,7 +12,7 @@
     <body>
         <header>
             <div>
-                <h4 style="font-size: 30px; color: white;">Miguel <span class="peachy-color">GL</span></h4>
+                <h4 style="font-size: 30px; color: white;">Miguel <span class="animated-colors">GL</span></h4>
             </div>
             <nav>
                 <ul class="nav-links">
@@ -38,7 +38,7 @@
                     <button class="details-button" data-target="skills">
                         <a>Skills</a>
                     </button>
-                    <button class="details-button" data-target="#experience">
+                    <button class="details-button" data-target="experience">
                         <a>Experience</a>
                     </button>
                 </div>
@@ -61,21 +61,21 @@
                         <p class="p-small-description">My academic background reflects my passion for software engineering and problem-solving.</p>
                         <div class="education-container">
                             <div class="education-content">
-                                <h5 class="h5-small-text" style="color: var(--neon-green);">2024 - Present</h5>
+                                <h5 class="date-timeframe">2024 - PRESENT</h5>
                                 <h4 class="h4-small-text light-weight">Western Governors University</h4>
                                 <p class="p-small-description">B.S. Software Engineering<br>
                                 Expected Graduation: July 2026
                                 </p>
                             </div>
                             <div class="education-content">
-                                <h5 class="h5-small-text" style="color: var(--neon-green);">2021 - 2023</h5>
+                                <h5 class="date-timeframe">2021 - 2023</h5>
                                 <h4 class="h4-small-text light-weight">DeVry University</h4>
                                 <p class="p-small-description">A.S. Information Technology & Networking<br>
                                     <span class="honor-text">Honor Student</span>
                                 </p>
                             </div>
                             <div class="education-content">
-                                <h5 class="h5-small-text" style="color: var(--neon-green);">2023</h5>
+                                <h5 class="date-timeframe">2023</h5>
                                 <h4 class="h4-small-text light-weight">Kretivstorm</h4>
                                 <p class="p-small-description">Python Development<br>
                                     Certificate
@@ -87,24 +87,70 @@
                         <h3 class="h3-medium-text">My Skills</h3>
                         <p class="p-small-description">Skills honed through academic projects and personal development in software engineering</p>
                         <div class="logo-container">
-                            <img class="logo" src="./images/programming-icons/html.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/css.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/js.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/ts.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/json.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/java.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/python.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/nodejs.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/angular.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/bootstrap.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/mysql.png" alt="Programming Logo">
-                            <img class="logo" src="./images/programming-icons/postgresql.png" alt="Programming Logo">
-                        </div>      
-            
-            
+                            <div class="logo-wrapper">
+                                <span class="logo-text">HTML</span>
+                                <img class="logo" src="./images/programming-icons/html.png" alt="Programming Logo" title="HTML">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">CSS</span>
+                                <img class="logo" src="./images/programming-icons/css.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">JavaScript</span>
+                                <img class="logo" src="./images/programming-icons/js.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">TypeScript</span>
+                                <img class="logo" src="./images/programming-icons/ts.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">JSON</span>
+                                <img class="logo" src="./images/programming-icons/json.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">Java</span>
+                                <img class="logo" src="./images/programming-icons/java.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">Python</span>
+                                <img class="logo" src="./images/programming-icons/python.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">Node.js</span>
+                                <img class="logo" src="./images/programming-icons/nodejs.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">Angular</span>
+                                <img class="logo" src="./images/programming-icons/angular.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">Bootstrap</span>
+                                <img class="logo" src="./images/programming-icons/bootstrap.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">MySQL</span>
+                                <img class="logo" src="./images/programming-icons/mysql.png" alt="Programming Logo">
+                            </div>
+                            <div class="logo-wrapper">
+                                <span class="logo-text">PostgreSQL</span>
+                                <img class="logo" src="./images/programming-icons/postgresql.png" alt="Programming Logo">
+                            </div>
+                        </div>                            
                     </div>
                     <div class="detail-content hidden" id="experience">
-                        <p>Experience</p>
+                        <h3 class="h3-medium-text">My Experience</h3>
+                        <p class="p-small-description">Most of my experience comes from academic & side projects. However, it showcases my skills, creativity, and problem-solving mindset.</p>
+                        <div class="experience-container">
+                            <div class="experience-content">
+                                <h5 class="date-timeframe">2022 - PRESENT</h5>
+                                <h4 class="h4-smaller-text light-weight">Web & Software Developer (Personal Projects)</h4>
+                                <p class="p-small-description">Developing interactive web applications and personal projects using HTML, CSS, JavaScript, and Angular, with a focus on responsive design and user experience.</p>
+                            </div>
+                            <div class="experience-content">
+                                <h5 class="date-timeframe">2021 - PRESENT</h5>
+                                <h4 class="h4-smaller-text light-weight">Learning Ambassador (Amazon SC Building)</h4>
+                                <p class="p-small-description">Provided hands-on training and mentorship to new employees, fostering a collaborative environment while enhancing team efficiency and communication skills.</p>
+                            </div>
                     </div>
                 </div>
             </div>

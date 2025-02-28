@@ -23,3 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+/* 
+If each button has it's own color, get the color class from the button (red, green, blue, etc.) and
+add their respective class (active-red, active-green, active-blue, etc.) to the button.
+
+If possible, add a attribute to each button called "data-color" and set the value to the color class.
+
+
+*/
