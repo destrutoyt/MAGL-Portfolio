@@ -368,198 +368,108 @@ header {
 
 
 
-
-
-
-
-.row {
-    display: flex;
-    flex-direction: row;
-}
-.card {
-    background-color: transparent;
-}
-.card-body {
-    background-color: var(--card-body-backg-color);
-    border: 1px solid;
-    border-image: var(--border-gradient) 1;
-    transition: transform 0.3s ease;
-}
-.card-body .card-title {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    color: black;
-}
-.card-body .card-text {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
-    color: black;
-}
-.card-body:hover {
-    transform: scale(1.02);
-}
-.card-title-reduced {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.skillShowcase {
-    padding: 5px;
-    margin: 5px;
-    text-align: center;
-    font-style: italic;
-}
-.badge {
-    background-color: var(--badge-backg-color);
-    padding: 15px;
-    margin: 5px 15px 10px;
-    transition-duration: 0.3s;
-}
-.cert {
-    text-decoration: none;
-    background-color: var(--cert-badge-backg-color);
-}
-.badge:hover {
-    background: grey;
-    transform: scale(1.05);
-}
-
-/* QUOTE ELEMENT */
-.text-center {
-    margin: 10px auto; /* Adds margin around the quote, centers it horizontally */
-    max-width: 80%; /* Ensure it doesn't stretch too wide on large screens */
-}
-
-blockquote {
-    margin: 0; /* Removes default margin */
-    padding: 5px; /* Adds some padding inside the blockquote */
-}
-
-.blockquote-footer {
-    font-size: 14px; /* Adjusts font size */
-}
-
-/* PROJECT WEBPAGE */
-.header-projects-title {
-    font-family: "Chakra Petch", serif;
-    font-weight: 600;
-    color: #000000;
-    font-size: 50px;
-}
+/* ===== PROJECTS WEBPAGE STYLING ===== */
+/* == CONTAINERS == */
 .project-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 70px;
-}
-.project-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    min-height: 500px; /* Adjust if necessary */
-    padding: 0px 30vw 50px 30vw;
-    border-bottom: 2px solid gray;
-    opacity: 0;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    padding: 150px 0 80px 0;
 }
-.project-card:nth-child(1) {
-    animation: fade-in 1s ease 1s forwards;
+.project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
 }
-.project-card:nth-child(2) {
-    animation: fade-in 1s ease 2s forwards;
-}
-.project-card:nth-child(3) {
-    animation: fade-in 1s ease 3s forwards;
-}
-.project-card:nth-child(4) {
-    animation: fade-in 1s ease 4s forwards;
-    border: none;       /* Removes border from last card */
-}
-.card-right-shadow {
-    box-shadow: 0px 0px 35px 3px rgba(36, 158, 85, 0.607);
-}
-.card-left-shadow {
-    box-shadow: 0px 0px 35px 3px rgba(36, 158, 85, 0.607);
-}
-.card-img-right, .card-img-left  {
-    width: 100%;
-    height: 100%;
-    max-width: 500px;
-    max-height: 280px;
-    object-fit: cover; /* Ensures the image fills the square without stretching */
+.project-image {
     float: right;
-}
-.card-img-left {
-    float: left;
+    width: 600px;
+    height: 500px;
+    border-radius: 20%;
 }
 .project-title {
-    padding-top: 5px;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 700;
+    width: 550px;
+    color: transparent;
+    -webkit-text-stroke: 2px #97ffc2;
     text-transform: uppercase;
-    text-align: center;
-    width: 70%;
-    color: rgb(242, 180, 24);
 }
+.project-description {
+    font-size: 1.1rem;
+    color: white;
+    margin-right: 0;
+    width: 550px;
+}
+.project-github, .project-website {
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+.project-github:hover, .project-website:hover {
+    transform: translateY(-10px);
+}
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.slider-button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.slider-arrow {
+    width: 60px;
+    height: 60px;
+    transition: all 0.2s ease;
+}
+.slider-arrow:hover, .slider-button:hover {
+    transform: scale(1.2);
+}
+
+
 .project-tags {
     display: flex;
     flex-direction: row;
-    padding: 0;
     gap: 10px;
     list-style-type: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 .tag {
-    display: inline-block; /* Ensures proper spacing */
-    min-width: 80px; /* Adjust this value as needed */
+    min-width: 50px;
     text-align: center;
-    background-color: rgb(87, 186, 181);
-    padding: 7px 10px;
+    background-color: #819aee;
+    padding: 5px 5px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     white-space: nowrap; /* Prevents text from breaking */
 }
+.tag.special {
+    background-color: var(--peachy);
+}
+.tag.dev {
+    background-color: rgb(211, 98, 98);
+}
+.tag.dev:hover {
+    background-color: rgba(211, 98, 98, 0.758);
+}
+.tag.special:hover {
+    background-color: #ff7f5fb3;
+}
 .tag:hover {
-    background-color: rgb(102, 222, 216);
-}
-.project-description {
-    font-size: 1.2rem;
-    width: 100%;
-    color: black;
-    text-align: center;
-}
-.left-text {
-    text-align: right;
-    margin-right: 20px;
-}
-.right-text {
-    text-align: left;
-    margin-left: -20px;
-}
-.project-button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 200px;
-    position: relative;
-    bottom: -15px;
-    padding: 5px 15px 5px 15px;
-    border: 2px solid var(--project-button-border-color);
-    border-radius: 5px;
-    background-color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    color: black;
-    transition: all 0.3s ease;
-}
-.project-button:hover {
-    background-color: var(--project-button-backg-color);
-    border-radius: 10px;
-    transform: scale(1.02);
+    background-color: #819aeeca;
 }
 
 /* CONTACT WEBPAGE */
