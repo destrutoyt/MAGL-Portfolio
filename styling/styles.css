@@ -67,6 +67,9 @@ header {
 .dark-beige {
     color: var(--light-warm-color) !important;
 }
+.reddish {
+    color: red;
+}
 .animated-colors {
     background: linear-gradient(45deg , var(--neon-orange), var(--neon-pink), var(--neon-purple), var(--neon-yellow));
     background-clip: text;
@@ -162,6 +165,9 @@ header {
 }
 .hidden {
     display: none;
+}
+.center-text {
+    text-align: center;
 }
 
 /* ===== NAVBAR ===== */
@@ -472,47 +478,146 @@ header {
     background-color: #819aeeca;
 }
 
-/* CONTACT WEBPAGE */
-.main-form {
+/* ===== CONTACT WEBPAGE STYLING ===== */
+
+.contact-container {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    padding: 20px;
-    margin: 20px auto auto auto;
-    width: 50%;
-    border: 2px solid rgb(151, 135, 116);
-    background-color: blanchedalmond;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    color: white;
+    gap: 5px;
+}
+
+.social-container {
+    display: flex;
+    padding-top: 30px;
+    gap: 50px;
+}
+
+.form-container {
+    display: flex;
+    padding-top: 30px;
+}
+/* == SOCIAL == */
+.social {
+    width: 75px;
+    height: 75px;
+    transition: all 0.3s ease;
+}
+.social:hover {
+    transform: translateY(-5px);
+}
+
+/* == FORM == */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #afb7dfa4;
     border-radius: 20px;
-    text-align: center;
-    transition: all 0.2s ease;
+    padding: 40px 60px 40px 60px;
 }
-.form-control {
-    border-width: 2px;
-    border-color: #151716;
-}
-.submit-button {
-    font-weight: 500;
-    color: white;
+
+label {
+    font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
-    border: 3px solid rgb(40, 123, 134);
-    background-color: rgb(193, 151, 151);
-    padding: 8px;
-    opacity: 0.6;
-    transition: all 0.5s ease;
+    font-weight: 500;
 }
-.submit-button:not(.disabled) {
-    opacity: 1;
+input, select, textarea {
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    font-family: 'Rubik', sans-serif;
+    resize: none;
+}
+textarea {
+    height: 100px;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none; /* Optional */
+}
+
+input.error, textarea.error {
+    background-color: #f8cbcb;
+}
+input.success, textarea.success {
+    background-color: #c6f6eb;
+}
+
+
+.success-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
     color: white;
-    background-color: rgb(108, 209, 117);
+}
+.success-msg-title {
+    color: #89ffb4;
+    font-style: italic;
+}
+.go-back {
+    margin-top: 20px;
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease;
+}
+.go-back:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+/* == ROCKET ANIMATION == */
+button {
+    margin-top: 30px;
+    background: none;
+    border: none;
+}
+.rocket {
+    width: 50px;
+    height: 50px;
     cursor: pointer;
+    transition: transform 0.4s ease-out, opacity 1s ease;
 }
-.submit-button:not(.disabled):hover {
-    border-radius: 10px;
-    transform: scale(1.03);
+.rocket:hover {
+    transform: scale(1.2);
 }
-.disabled {
-    cursor: not-allowed !important;
+.rocket.launched {
+    transform: translateY(-700px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease;
 }
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+
+
+
+
 
 /* ===== MAIN PAGE ANIMATIONS ===== */
 @keyframes borderAround {
@@ -534,15 +639,6 @@ header {
     to {
         width: 570px;
     }
-}
-/* Project Animations (Obsolete?)*/
-@keyframes animate {
-    0% { background-position-x: 0;}
-    100% {background-position-x: 1000px;}
-}
-@keyframes fade-in {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
 }
 
 

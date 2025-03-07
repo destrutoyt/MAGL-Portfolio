@@ -1,50 +1,65 @@
-const form = document.getElementById('contact-form');
-const submitButton = document.getElementById('submitButton');
+const rocket = document.querySelector(".rocket");
+const msg = document.querySelector('.msg');
+const form = document.querySelector('.contact-form');
 
-console.log('Form Validator initialized');
+console.warn("Script formValidator.js is active.");
 
-form.addEventListener("input", function(event) {
-    event.preventDefault();
-    if (validationTest() == 3) {
-        submitButton.classList.remove('disabled');
-        submitButton.disabled = false;
-    }
-    else {
-        submitButton.classList.add('disabled');
-        submitButton.disabled = true;
+form.addEventListener('input', function(event) {
+    event.preventDefault(); // Prevent default form behavior
+
+    let passed = validationTest();
+
+    if (passed === 3) {
+        rocket.classList.remove('hidden');
+        console.log("Validation test met requirements. Showing rocket.");
+    } else {
+        rocket.classList.add('hidden');
+        console.log("Validation test hasn't met the requirements");
     }
 });
 
 function validationTest() {
-    let userName = document.getElementById('userName');
+    let name = document.getElementById('userName');
     let message = document.getElementById('message');
-    let emailAddress = document.getElementById('emailAddress').value.trim();
-    let emailLabel = document.getElementById('emailAddress');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.(com|org|edu)$/;
+    let email = document.getElementById('emailAddress');
     let passed = 0;
 
-    if (!isNaN(userName.value)) {
-        userName.style.borderColor = 'red';
+    if (validateInput(name, value => isNaN(value) && value.trim() !== '')) {
+        passed++;
     }
-    else {
-        passed += 1;
-        userName.style.borderColor = 'lime';
-    }
-    
-    if (!emailRegex.test(emailAddress)) {
-        emailLabel.style.borderColor = 'red';
-    }
-    else {
-        passed += 1;
-        emailLabel.style.borderColor = 'lime';
+    if (validateInput(message, value => value.trim() !== '')) {
+        passed++;
     }
 
-    if (message.value.trim().length === 0) {
-        message.style.borderColor = 'red';
+    if (validateInput(email, value => /\S+@\S+\.\S+/.test(value) && value.trim() !== '')) {
+        passed++;
     }
-    else {
-        passed += 1;
-        message.style.borderColor = 'lime';
-    }
+
     return passed;
+}
+
+function validateInput(input, condition) {
+    // Reset previous validation styles
+    input.classList.remove('error', 'success');
+
+    if (condition(input.value)) {
+        showSuccess(input);
+        return true;
+    } else {
+        showError(input);
+        return false;
+    }
+}
+
+function showError(input) {
+    input.classList.add('error');
+}
+
+function showSuccess(input) {
+    input.classList.add('success');
+}
+
+function launchRocket() {
+    rocket.classList.add("launched");
+    msg.textContent = "SENDING FORM";
 }
