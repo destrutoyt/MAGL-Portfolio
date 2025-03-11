@@ -129,6 +129,7 @@ header {
     font-size: 1.2rem;
     font-weight: 400;
     color: white;
+    display: block;
 }
 .numeric-data-text {
     font-size: 3rem;
@@ -179,6 +180,7 @@ header {
 nav {
     height: 80px;
     width: 100%;
+    z-index: 10000;
 }
 label.title {
     font-family: 'Rubik', sans-serif;
@@ -300,6 +302,10 @@ a.active {
 }
 
 /* == LEFT CONTAINER DESIGN == */
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
 .details-button {
     width: 500px;
     height: 50px;
@@ -330,6 +336,7 @@ a.active {
 .education-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
     left: 0;
 }
@@ -355,7 +362,7 @@ a.active {
 }
 .logo-text {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(10px);
@@ -392,6 +399,7 @@ a.active {
 .experience-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     left: 0;
@@ -681,8 +689,56 @@ button {
 
 
 /* RESPONSIVE DESIGN */
+@media (max-width: 1440px) {
+    .right-container {
+        padding: 20px;
+    }
+    .left-container {
+        padding: 0;
+        gap: 0;
+    }
+    .left-container .h2-large-text {
+        font-size: 45px;
+    }
+    .left-container .p-small-text {
+        font-size: 20px;
+    }
+    .details-button {
+        width: 350px;
+    }
+    .education-content {
+        padding: 20px;
+    }
+    .education-content .date-timeframe {
+        font-size: 1rem;
+    }
+    .education-content .h4-small-text {
+        font-size: 1.1rem;
+    }
+    .education-content .p-small-description {
+        font-size: 1rem;
+    }
+    .logo-container {
+        gap: 5px;
+    }
+    .logo-text {
+        font-size: 1rem;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+    .experience-content .date-timeframe {
+        font-size: 1.1rem;
+    }
+    .experience-content .h4-smaller-text {
+        font-size: 1rem;
+    }
+    .experience-content .p-small-description {
+        font-size: 0.9rem;
+    }
+}
 @media (max-width: 1368px) {
-
     .main-container {
         text-align: center;
         flex-wrap: wrap;
@@ -706,7 +762,68 @@ button {
         text-align: center;
     }
 }
+@media (max-width: 1320px) { /* CONTINUE HERE FOR DETAILS WEBPAGE RESPONSIVENESS */
+    .details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+    .p-small-text {
+        width: 100%;
+    }
+    .button-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .right-container {
+        margin: 0;
+        padding: 0;
+    }
+    .left-container {
+        margin: 0;
+        padding: 0;
+        float: none;
+    }
+    .margin-left-100 {
+        margin-left: 0;
+    }
+    .left-container .h2-large-text {
+        font-size: 35px;
+    }
+    .left-container .p-small-text {
+        font-size: 15px;
+    }
+    .details-button {
+        width: 250px;
+    }
+    .education-container {
+        justify-content: center;
+    }
+    .education-content {
+        padding: 15px;
+    }
+    .logo-container {
+        gap: 5px;
+    }
+    .logo-text {
+        font-size: 1rem;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+}
 @media (max-width: 1215px) {
+    .details-button {
+        width: 150px;
+    }
+    .details-button a {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
     label.title {
         font-size: 25px;
         padding-left: 10px;
@@ -745,6 +862,28 @@ button {
 
 
 @media (max-width: 768px) {
+    .p-small-text {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .right-container .p-small-description {
+        font-size: 0.99em;
+    }
+    .right-container .h3-medium-text {
+        font-size: 1.8rem;
+    }
+    .details-container {
+        padding: 20px;
+    }
+    .details-button {
+        width: 115px;
+        height: 55px;
+    }
+    .details-button a {
+        font-size: 0.7rem;
+        padding: 0;
+        margin: 0;
+    }
     .main-container {
         flex-wrap: wrap;
         justify-content: center;
@@ -759,12 +898,49 @@ button {
     }
 }
 @media (max-width: 661px) {
+    .button-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .details-button a {
+        font-size: 0.7rem;
+        padding: 0;
+        margin: 0;
+    }
     label.title {
         font-size: 17px;
         padding: 0 20px;
     }
 }
 @media (max-width: 426px) {
+    .right-container .p-small-description {
+        font-size: 0.9em;
+    }
+    .education-content {
+        width: 100%;
+    }
+    .education-content .date-timeframe {
+        font-size: 1rem;
+    }
+    .education-content .h4-small-text {
+        font-size: 0.8rem;
+    }
+    .education-content .p-small-description {
+        font-size: 0.8rem;
+    }
+    .experience-content {
+        padding: 10px;
+        width: 100%;
+    }
+    .experience-content .date-timeframe {
+        font-size: 1rem;
+    }
+    .experience-content .h4-smaller-text {
+        font-size: 0.8rem;
+    }
+    .experience-content .p-small-description {
+        font-size: 0.8rem;
+    }
     .heading-image img {
         width: 150px;
         height: 200px;
@@ -786,5 +962,11 @@ button {
 }
 
 @media (max-width: 376) {
-
+    .logo-text {
+        font-size: 0.7rem;
+    }
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
 }
