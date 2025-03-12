@@ -48,6 +48,9 @@ body {
     background-color: var(--body-backg-color);
     margin: 0;
 }
+html, body {
+    overflow-x: hidden;
+}
 li, a {
     font-family: 'Rubik', sans-serif;
     font-size: 1.2rem;
@@ -189,16 +192,16 @@ label.title {
     padding: 0 100px;
     font-weight: bold;
 }
-nav ul {
+nav .nav-menu {
     float: right;
     margin-right: 20px;
 }
-nav ul li {
+nav .nav-menu li {
     display: inline-block;
     line-height: 80px;
     margin: 0 10px;
 }
-nav ul li a {
+nav .nav-menu li a {
     display: inline-block;
     font-family: 'Rubik', sans-serif;
     font-weight: 500    ;
@@ -431,6 +434,8 @@ a.active {
     text-align: center;
     gap: 30px;
     padding: 150px 0 80px 0;
+    width: 100%;
+    overflow: hidden;
 }
 .project {
     display: flex;
@@ -501,7 +506,7 @@ a.active {
 .tag {
     min-width: 50px;
     text-align: center;
-    background-color: #819aee;
+    background-color: #4e8ba3;
     padding: 5px 5px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -522,7 +527,7 @@ a.active {
     background-color: #ff7f5fb3;
 }
 .tag:hover {
-    background-color: #819aeeca;
+    background-color: #4e8ba3ae
 }
 
 /* ===== CONTACT WEBPAGE STYLING ===== */
@@ -688,7 +693,12 @@ button {
 
 
 
-/* RESPONSIVE DESIGN */
+/* ========== RESPONSIVE DESIGN  ========== */
+/*  TODO
+- Implement RD for Project.html and Contact.html
+- FIX: Typing animation in index.html creates extra padding while executing. Disable or repair as necessary!
+*/
+
 @media (max-width: 1440px) {
     .right-container {
         padding: 20px;
@@ -737,6 +747,13 @@ button {
     .experience-content .p-small-description {
         font-size: 0.9rem;
     }
+    .project-image {
+        width: 500px;
+        height: 400px;
+    }
+    .project-title {
+        font-size: 2.5rem;
+    }
 }
 @media (max-width: 1368px) {
     .main-container {
@@ -762,7 +779,7 @@ button {
         text-align: center;
     }
 }
-@media (max-width: 1320px) { /* CONTINUE HERE FOR DETAILS WEBPAGE RESPONSIVENESS */
+@media (max-width: 1320px) {
     .details-container {
         display: flex;
         flex-direction: column;
@@ -828,15 +845,36 @@ button {
         font-size: 25px;
         padding-left: 10px;
     }
-    nav ul li a {
+    nav .nav-menu li a {
         font-size: 17px;
+    }
+    .project {
+        gap: 20px;
+    }
+    .project-image {
+        width: 400px;
+        height: 300px;
+    }
+    .project-title {
+        font-size: 2rem;
+        -webkit-text-stroke: 1px #97ffc2;
+    }
+    .project-description {
+        font-size: 1rem;
+    }
+    .project-github, .project-website {
+        width: 70px;
+        height: 70px;
+    }
+    .tag {
+        font-size: 0.8rem;
     }
 }
 @media (max-width: 1060px) {
     .checkbtn {
         display: block;
     }
-    ul {
+    .nav-menu {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -846,20 +884,70 @@ button {
         text-align: center;
         transition: all 0.3s;
     }
-    nav ul li {
+    nav .nav-menu li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a {
+    nav .nav-menu li a {
         font-size: 20px;
     }
-    #check:checked ~ ul {
+    #check:checked ~ .nav-menu {
         left: 0;
+    }
+    .project-image {
+        width: 350px;
+        height: 300px;
+    }
+    .project-title {
+        font-size: 1.8rem;
+    }
+    .project-description {
+        font-size: 0.8rem;
+    }
+    .project-github, .project-website {
+        width: 65px;
+        height: 65px;
+    }
+    .project-github:hover, .project-website:hover {
+        transform: translateY(-5px);
+    }
+    .tag {
+        font-size: 0.8rem;
+    }
+    .slider-arrow {
+        width: 50px;
+        height: 50px;
+    }
+    .slider-arrow:hover {
+        transform: scale(1.1);
     }
 }
 
-
+@media (max-width: 933px) {
+    .project-container {
+        padding: 0;
+    }
+    .project {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .project-image {
+        float: none;
+        width: 450px;
+        height: 300px;
+    }
+    .slider-controls {
+        padding: 0;
+        margin-top: 0;
+        gap: 0;
+    }
+    .slider-button {
+        padding: 5px;
+    }
+}
 
 @media (max-width: 768px) {
     .p-small-text {
@@ -912,6 +1000,36 @@ button {
         padding: 0 20px;
     }
 }
+@media (max-width: 540px) {
+    .project-image {
+        width: 350px;
+        height: 250px;
+    }
+    .project-title {
+        margin: 0 auto 10px;
+        font-size: 1.5rem;
+        width: 250px;
+    }
+    .project-description {
+        margin: 0 auto;
+        font-size: 0.75rem;
+        width: 350px;
+    }
+    .project-github, .project-website {
+        width: 60px;
+        height: 60px;
+    }
+    .project-tags {
+        flex-wrap: wrap;
+    }
+    .tag {
+        font-size: 0.7rem;
+    }
+    .slider-arrow {
+        width: 50px;
+        height: 50px;
+    }
+}
 @media (max-width: 426px) {
     .right-container .p-small-description {
         font-size: 0.9em;
@@ -961,7 +1079,7 @@ button {
     }
 }
 
-@media (max-width: 376) {
+@media (max-width: 376px) {
     .logo-text {
         font-size: 0.7rem;
     }
@@ -969,4 +1087,14 @@ button {
         width: 75px;
         height: 75px;
     }
+    .project-description {
+        width: 270px;
+    }
+    .project-image {
+        width: 310px;
+        height: 265px;
+    }
+}
+
+@media (max-width: 320px) {
 }
