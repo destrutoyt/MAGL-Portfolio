@@ -823,6 +823,9 @@ button {
     .details-button {
         width: 250px;
     }
+    #about-me .margin-left-75 {
+        margin: 0;
+    }
     .education-container {
         justify-content: center;
     }
