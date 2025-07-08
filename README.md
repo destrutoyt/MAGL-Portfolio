@@ -1,27 +1,28 @@
 # My Portfolio
 
-Welcome! 
-You have reached my repository for my portfolio. There isn't much to say, but I will mentioned some of the features available!
-
-
+Welcome!  
+You’ve reached the repository for my personal developer portfolio. While there’s still more I plan to add, here are some key features that are already live:
 
 ## Features
-- Animated & Interactive website
-- Dedicated webpage to learn more about myself
-- Interactive project showcase
-- Enhanced contact form
-- Extended Responsive Design for all devices
-- Minimalist, Modern, & Simple design.
-- Organized code by comments & variables
-
-
+- Animated & interactive user interface
+- Dedicated “About Me” page with detailed background
+- Interactive project showcase with real-time links
+- Enhanced contact form with validation
+- Extended responsive design across all screen sizes
+- Minimalist, modern, and clean aesthetic
+- Well-structured codebase using semantic HTML, scoped styles, and clear comments
 
 ## Known Issues
-I do my best to test the website before releasing it, however, some issues might not be detected until released to production.
+Although I thoroughly test the website before deploying updates, some issues may only surface in production.
 
-As of 3/12/2025, I've identified the following issues:
-- `typewriter-effect` adds extra width which disrupts some contents in smaller screens during the duration of the effect.
+As of **3/12/2025**, the following issues are known:
+- `typewriter-effect` introduces horizontal overflow on smaller screens during animation.
+- Certain images appear distorted due to stretching or shrinking beyond their native resolution. This is not a priority fix but is under review.
 
-I can't provide a specific date to fix these issues, but I am looking ways to improve my website **bi-weekly**, which includes fixes. 
+I aim to improve the portfolio **monthly**, including fixing bugs, adding features, and optimizing performance.
 
-Additionally, I know that some images look distorted and it's mainly because I am either streaching or shrinking the picture below or beyond it's parameters. It is not a high-priority task, but I am still looking for solutions.
+## Bug Tracking
+
+All portfolio-related issues and tasks are tracked using **JIRA** to ensure structured development and continuous improvement.  
+While my JIRA board is currently private, it reflects an organized Agile workflow with sprint planning, issue prioritization, and backlog management.
+
